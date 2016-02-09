@@ -1,0 +1,23 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           CmsPage
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          cmspages
+    with_doctrine_route:   true
+
+    config:
+      list:
+        title:          Pages
+        display:        [ =title, =identifier, published, published_at, updated_at ]
+        actions:
+          _new:   ~
+        object_actions:
+          _edit:  ~
+        batch_actions:  {}
+      edit:       ~
+      new:        ~

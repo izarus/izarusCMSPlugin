@@ -1,0 +1,12 @@
+CmsPage:
+  actAs:
+    Sluggable:      { unique: true, fields: ['title'], canUpdate: true }
+    Timestampable:  ~
+    Publishable:    ~
+  columns:
+    title:          { type: string, size: 200, notnull: true }
+    excerpt:        { type: string }
+    content:        { type: string }
+    image:          { type: string, size: 200 }
+    identifier:     { type: string, size: 100, notnull: true, unique: true }
+
